@@ -1,0 +1,24 @@
+<mat-dialog-content>
+	<div class = "tp-container">
+        <mat-form-field appearance = "standard">
+           <input matInput placeholder = "From Account" [(ngModel)]="transaction.fromAcc">
+        </mat-form-field>
+        <mat-form-field appearance = "standard">
+            <input matInput placeholder = "To Account" [(ngModel)]="transaction.toAcc">
+         </mat-form-field>
+         <mat-form-field appearance = "standard">
+            <input matInput placeholder = "Amount" [(ngModel)]="transaction.amount">
+         </mat-form-field>
+         <mat-form-field appearance = "standard">
+            <input matInput placeholder = "dd-mm-yyyy hh:mm"  [(ngModel)]="transaction.date">
+         </mat-form-field>
+         <mat-form-field appearance = "standard">
+            <input matInput placeholder = "Currency Type"  [(ngModel)]="transaction.currencyType">
+         </mat-form-field>
+     </div>
+     
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+	<button mat-raised-button color="primary" (click)="addTransaction()" tabindex="1">add</button>
+	<button mat-raised-button mat-dialog-close tabindex="-1">close</button>
+</mat-dialog-actions>
